@@ -1,7 +1,7 @@
 FROM alpine:3.18
 
 
-ENV TENGINE_VERSION 3.0.0
+ENV TENGINE_VERSION 3.1.0
 
 # nginx: https://git.io/vSIyj
 
@@ -44,6 +44,7 @@ ENV CONFIG "\
         --with-stream \
         --with-stream_ssl_module \
         --with-stream_ssl_preread_module \
+        --with-stream_sni \
         --with-stream_realip_module \
         --with-stream_geoip_module=dynamic \
         --with-http_slice_module \
